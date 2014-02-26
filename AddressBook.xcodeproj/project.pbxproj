@@ -26,6 +26,8 @@
 		81A0280A18BDB006007729F7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A027E218BDB006007729F7 /* CoreData.framework */; };
 		81A0281218BDB006007729F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 81A0281018BDB006007729F7 /* InfoPlist.strings */; };
 		81A0281418BDB006007729F7 /* AddressBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A0281318BDB006007729F7 /* AddressBookTests.m */; };
+		81A0281F18BDB226007729F7 /* Address.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A0281E18BDB226007729F7 /* Address.m */; };
+		81A0282218BDB252007729F7 /* Persion.m in Sources */ = {isa = PBXBuildFile; fileRef = 81A0282118BDB252007729F7 /* Persion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,10 @@
 		81A0280F18BDB006007729F7 /* AddressBookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AddressBookTests-Info.plist"; sourceTree = "<group>"; };
 		81A0281118BDB006007729F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		81A0281318BDB006007729F7 /* AddressBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressBookTests.m; sourceTree = "<group>"; };
+		81A0281D18BDB226007729F7 /* Address.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Address.h; sourceTree = "<group>"; };
+		81A0281E18BDB226007729F7 /* Address.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Address.m; sourceTree = "<group>"; };
+		81A0282018BDB252007729F7 /* Persion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Persion.h; sourceTree = "<group>"; };
+		81A0282118BDB252007729F7 /* Persion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Persion.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,10 @@
 				81A027FD18BDB006007729F7 /* DetailViewController.m */,
 				81A027FF18BDB006007729F7 /* Images.xcassets */,
 				81A027F618BDB006007729F7 /* AddressBook.xcdatamodeld */,
+				81A0281D18BDB226007729F7 /* Address.h */,
+				81A0281E18BDB226007729F7 /* Address.m */,
+				81A0282018BDB252007729F7 /* Persion.h */,
+				81A0282118BDB252007729F7 /* Persion.m */,
 				81A027E518BDB006007729F7 /* Supporting Files */,
 			);
 			path = AddressBook;
@@ -267,10 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A0281F18BDB226007729F7 /* Address.m in Sources */,
 				81A027FE18BDB006007729F7 /* DetailViewController.m in Sources */,
 				81A027FB18BDB006007729F7 /* MasterViewController.m in Sources */,
 				81A027F818BDB006007729F7 /* AddressBook.xcdatamodeld in Sources */,
 				81A027EF18BDB006007729F7 /* AppDelegate.m in Sources */,
+				81A0282218BDB252007729F7 /* Persion.m in Sources */,
 				81A027EB18BDB006007729F7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "Address.h"
+
 
 @interface DetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -36,14 +38,44 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        //self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        Persion* person = (Persion*)self.detailItem;
+        self.nameField.text = person.name;
+        self.zipCodeField.text = person.address.zipCode;
+        self.stateField.text = person.address.state;
+        self.cityField.text = person.address.city;
+        self.otherField.text = person.address.other;
+        
+        
     }
 }
 
+- (void)done
+{
+    Persion* person = (Persion*)self.detailItem;
+    person.name = self.nameField.text;
+    person.address.zipCode = self.zipCodeField.text;
+    person.address.state = self.stateField.text;
+    person.address.city = self.cityField.text;
+    person.address.other = self.otherField.text;
+    
+    NSError* error = nil;
+    if( ![self.managedObjectContext save: &error] )
+    {
+        NSLOg(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
+    if( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
+    {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonItemStyleDone target:self action:@selector(done)];
     [self configureView];
 }
 
